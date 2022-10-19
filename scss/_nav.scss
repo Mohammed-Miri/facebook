@@ -1,0 +1,45 @@
+nav , .nav {
+    @include flex(space-between , center);
+    background-color: white;
+    padding: $primary-padding;
+    box-shadow: 0 rem(3) rem(8) #0000000d;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    &__left {
+        flex: 25% 0 0;
+        max-width: $sidebar-width;
+    }
+    &__middle {
+        flex: 50% 0 0;
+        max-width: $feed-width;
+    }
+    &__right {
+        flex: 25% 0 0;
+        max-width: $sidebar-width;
+        
+    }
+    .facebook-icons {
+        @include flex(space-around , center);
+        font-size: 1.8rem;
+        color: $icon-color;
+        .active {
+            color: $active-icon;
+        }
+    }
+
+    .facebook-services {
+        @include flex(space-around , center);
+        .img-rounded {
+            @include img-rounded(40);
+        }
+        &__service {
+            @include flex(center , center);
+            @include circle-icon(40);
+            background-color: $icon-background-color;
+            font-size: 1.4rem;
+        }
+    }
+
+}
